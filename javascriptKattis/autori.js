@@ -1,0 +1,24 @@
+var readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false
+});
+
+//This took some time to get, this was quite confusing to get to
+rl.on('line', line => {
+    console.log(printSolution(line));
+});
+
+function printSolution(line) {
+    let shortAuthors = line
+        .match(/[A-Z]/g)
+        .join('');
+
+    return shortAuthors;
+}
+
+module.exports = {
+    printSolution: printSolution
+};
