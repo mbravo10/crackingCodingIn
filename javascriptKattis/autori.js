@@ -6,7 +6,6 @@ var rl = readline.createInterface({
     terminal: false
 });
 
-//This took some time to get, this was quite confusing to get to
 rl.on('line', line => {
     console.log(printSolution(line));
 });
